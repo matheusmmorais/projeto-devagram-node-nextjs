@@ -19,10 +19,11 @@ export const conectarMongoDB = (handler: NextApiHandler) =>
              if (!DB_CONEXAO_STRING){
                  return res.status(500).json({erro: "ENV de configuração de banco nao informado"});
              }
-
-        await mongoose.connect(DB_CONEXAO_STRING);
-        mongoose.connection.on('connect', () => console.log("banco de dados conectado"));
-        mongoose.connection.on('error', error => console.log("ocorreu um erro ao conectar ao banco"));
+        
+             mongoose.connection.on('connect', () => console.log("banco de dados conectado"));
+             mongoose.connection.on('error', error => console.log("ocorreu um erro ao conectar ao banco"));
+             await mongoose.connect(DB_CONEXAO_STRING);
+    
 
         // agora posso seguir para o endpoint pois estou conectado no banco
         return handler (req, res);

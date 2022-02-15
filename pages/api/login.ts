@@ -1,5 +1,6 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
 import { conectarMongoDB } from '../../middlewares/conectarMongoDB';
+import type {respostaPadrao} from "../../types/respostaPadrao";
 
 const endpointLogin = (
     req: NextApiRequest,
