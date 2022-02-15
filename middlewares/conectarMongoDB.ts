@@ -1,7 +1,6 @@
 import type {NextApiRequest, NextApiResponse, NextApiHandler} from 'next'
 import mongoose, { mongo } from 'mongoose';
-import handler from '../pages/api/hello';
-import MiddlewarePlugin from 'next/dist/build/webpack/plugins/middleware-plugin';
+import type {respostaPadrao} from "../types/respostaPadrao";
 
 export const conectarMongoDB = (handler: NextApiHandler) => 
        async (req: NextApiRequest, res: NextApiResponse) => {
@@ -27,5 +26,5 @@ export const conectarMongoDB = (handler: NextApiHandler) =>
 
         // agora posso seguir para o endpoint pois estou conectado no banco
         return handler (req, res);
-
+ 
         }
