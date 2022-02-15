@@ -1,4 +1,4 @@
-export type respostaPadrao ={
+export type respostaPadrao = {
     msg: string,
     erro: string
 };

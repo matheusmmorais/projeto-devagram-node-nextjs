@@ -1,5 +1,4 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
-import type {respostaPadrao} from '../../types/respostaPadrao';
 import type {usuarioRequisicao} from '../../types/usuarioRequisicao';
 import {UsuarioModel} from '../../models/usuarioModel';
 import md5 from 'md5';
